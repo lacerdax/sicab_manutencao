@@ -22,7 +22,9 @@
         --border: #e0dcd4;
       }
 
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -51,8 +53,20 @@
         position: fixed;
         inset: 0;
         background-image:
-          repeating-linear-gradient(45deg, rgba(78,160,84,0.06) 0px, rgba(78,160,84,0.06) 2px, transparent 2px, transparent 18px),
-          repeating-linear-gradient(-45deg, rgba(249,168,37,0.05) 0px, rgba(249,168,37,0.05) 2px, transparent 2px, transparent 18px);
+          repeating-linear-gradient(
+            45deg,
+            rgba(78, 160, 84, 0.06) 0px,
+            rgba(78, 160, 84, 0.06) 2px,
+            transparent 2px,
+            transparent 18px
+          ),
+          repeating-linear-gradient(
+            -45deg,
+            rgba(249, 168, 37, 0.05) 0px,
+            rgba(249, 168, 37, 0.05) 2px,
+            transparent 2px,
+            transparent 18px
+          );
         pointer-events: none;
         z-index: 0;
       }
@@ -65,7 +79,11 @@
         width: clamp(160px, 40vw, 320px);
         height: clamp(160px, 40vw, 320px);
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(76,175,80,0.15) 0%, transparent 70%);
+        background: radial-gradient(
+          circle,
+          rgba(76, 175, 80, 0.15) 0%,
+          transparent 70%
+        );
         pointer-events: none;
         z-index: 0;
       }
@@ -77,7 +95,11 @@
         width: clamp(130px, 30vw, 260px);
         height: clamp(130px, 30vw, 260px);
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(249,168,37,0.13) 0%, transparent 70%);
+        background: radial-gradient(
+          circle,
+          rgba(249, 168, 37, 0.13) 0%,
+          transparent 70%
+        );
         pointer-events: none;
         z-index: 0;
       }
@@ -92,8 +114,14 @@
       }
 
       @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(28px); }
-        to   { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       /* ── Logo area ── */
@@ -105,7 +133,7 @@
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1rem, 4vw, 2rem);
-        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
         margin-bottom: clamp(1.4rem, 4vw, 2.4rem);
         animation: fadeUp 0.8s 0.1s ease both;
         max-width: 100%;
@@ -163,7 +191,7 @@
         border: 1px solid var(--border);
         border-radius: 20px;
         padding: clamp(1.5rem, 6vw, 3rem) clamp(1.2rem, 6vw, 2.8rem);
-        box-shadow: 0 8px 48px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 48px rgba(0, 0, 0, 0.08);
         animation: fadeUp 0.8s 0.2s ease both;
       }
 
@@ -171,12 +199,16 @@
         width: clamp(56px, 12vw, 72px);
         height: clamp(56px, 12vw, 72px);
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+        background: linear-gradient(
+          135deg,
+          var(--green-dark),
+          var(--green-mid)
+        );
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-bottom: clamp(1rem, 3vw, 1.6rem);
-        box-shadow: 0 6px 20px rgba(46,125,50,0.25);
+        box-shadow: 0 6px 20px rgba(46, 125, 50, 0.25);
       }
 
       .icon-wrap svg {
@@ -207,7 +239,8 @@
         gap: 0.75rem;
         margin: clamp(1.2rem, 3vw, 2rem) 0;
       }
-      .divider::before, .divider::after {
+      .divider::before,
+      .divider::after {
         content: '';
         flex: 1;
         height: 1px;
@@ -253,7 +286,7 @@
         font-size: clamp(1rem, 3.5vw, 1.3rem);
         font-weight: 700;
         color: #5d4037;
-        box-shadow: 0 4px 16px rgba(249,168,37,0.2);
+        box-shadow: 0 4px 16px rgba(249, 168, 37, 0.2);
         text-align: center;
       }
 
@@ -382,38 +415,17 @@
     </style>
   </head>
   <body>
-    <div class="corner-top"></div>
-
     <div class="wrapper">
-      <!-- Logo -->
-      <div class="logo-block">
-        <div class="logo-icon">
-          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="22" width="48" height="12" rx="3" fill="#4caf50" />
-            <rect x="22" y="4" width="12" height="48" rx="3" fill="#f9a825" />
-            <rect x="22" y="22" width="12" height="12" rx="2" fill="#2e7d32" />
-            <rect x="4"  y="22" width="12" height="12" rx="2" fill="#388e3c" />
-            <rect x="40" y="22" width="12" height="12" rx="2" fill="#388e3c" />
-            <rect x="22" y="4"  width="12" height="12" rx="2" fill="#f9a825" />
-            <rect x="22" y="40" width="12" height="12" rx="2" fill="#f9a825" />
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="prog">Programa do</span>
-          <span class="pab-abbr">PAB</span>
-          <span class="artesanato">Artesanato Brasileiro</span>
-        </div>
-      </div>
-
       <!-- Card -->
       <div class="card">
         <div class="icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
+          <img
+            src="https://lacerdax.github.io/sicab_manutencao/logopab.png"
+            alt=""
+          />
         </div>
 
-        <h1>Sistema Temporariamente Indisponível</h1>
+        <h1>Sistema temporariamente indisponível</h1>
 
         <p class="subtitle">
           O Sistema de Informações Cadastrais do Artesanato Brasileiro (SICAB)
@@ -423,10 +435,17 @@
         </p>
 
         <div class="info-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#2e7d32"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           <p>
             A migração está sendo realizada para o ambiente gerenciado pelo
@@ -436,16 +455,23 @@
           </p>
         </div>
 
-        <div class="divider"><span>Previsão de retorno</span></div>
+        <div class="divider"><span>Previsão de lançamento</span></div>
 
         <div class="date-section">
-          <span class="date-label">O sistema retornará em</span>
+          <span class="date-label">O novo SICAB estará disponível em</span>
           <div class="date-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#f9a825" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8"  y1="2" x2="8"  y2="6"/>
-              <line x1="3"  y1="10" x2="21" y2="10"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f9a825"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
             31 de março de 2026
           </div>
@@ -485,21 +511,36 @@
         let diff = target - now;
 
         if (diff <= 0) {
-          ['days','hours','mins','secs'].forEach(id =>
-            document.getElementById(id).textContent = '00'
+          ['days', 'hours', 'mins', 'secs'].forEach(
+            (id) => (document.getElementById(id).textContent = '00'),
           );
           return;
         }
 
-        const d = Math.floor(diff / 86400000); diff -= d * 86400000;
-        const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
-        const m = Math.floor(diff / 60000);    diff -= m * 60000;
+        const d = Math.floor(diff / 86400000);
+        diff -= d * 86400000;
+        const h = Math.floor(diff / 3600000);
+        diff -= h * 3600000;
+        const m = Math.floor(diff / 60000);
+        diff -= m * 60000;
         const s = Math.floor(diff / 1000);
 
-        document.getElementById('days').textContent  = String(d).padStart(2,'0');
-        document.getElementById('hours').textContent = String(h).padStart(2,'0');
-        document.getElementById('mins').textContent  = String(m).padStart(2,'0');
-        document.getElementById('secs').textContent  = String(s).padStart(2,'0');
+        document.getElementById('days').textContent = String(d).padStart(
+          2,
+          '0',
+        );
+        document.getElementById('hours').textContent = String(h).padStart(
+          2,
+          '0',
+        );
+        document.getElementById('mins').textContent = String(m).padStart(
+          2,
+          '0',
+        );
+        document.getElementById('secs').textContent = String(s).padStart(
+          2,
+          '0',
+        );
       }
 
       updateCountdown();
